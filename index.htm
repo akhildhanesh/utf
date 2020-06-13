@@ -7,13 +7,12 @@
     <meta name="theme-color" content='#000000'>
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
     <meta name="description" content="Automatic Robotic Electric Vehicle Charging Machine With Digital Payment">
-    <meta name="robots" content="noindex" />
-    <meta property="og:url" content="https://s8.techworldscanner.xyz">
+    <meta property="og:url" content="https://roboticarm.techworldscanner.xyz">
     <meta property="og:site_name" content="Robotic Arm">
     <meta property="og:title" content="Robotic Arm">
     <meta property="og:description" content="Automatic Robotic Electric Vehicle Charging Machine With Digital Payment">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://s8.techworldscanner.xyz/img/cover.png">
+    <meta property="og:image" content="img/cover.png">
     <meta property="og:locale" content="en_IN">
     <title>Robotic Arm</title>
     <link rel="stylesheet" href="css/style.css">
@@ -117,8 +116,65 @@ The Future area of Research and Scope is the addition of a high resolution camer
  </div>
  <br>
  <br>
-<div class="container" data-aos="fade-up">
-	<h1 style="font-family: 'League Spartan', arial, helvetica, sans-serif;color: rgb(82, 161, 47);font-size: 32px;letter-spacing: normal;text-align: center;font-weight: bold;">COMPONENTS</h1><br>
+<div class="container">
+	<h1 style="font-family: 'League Spartan', arial, helvetica, sans-serif;color: rgb(82, 161, 47);font-size: 32px;letter-spacing: normal;text-align: center;font-weight: bold;">II.	PROPOSED SYSTEM</h1><br>
+	<p>The concept proposal is capable to charge any electric car independently from the brand and the charging socket position. It does not require complex vehicle adaptions or modifications. Furthermore, it is possible to charge multiple vehicles with only one robot.<br>
+		<br>
+Here, we are using cheap and simple robot charging machine without camera system for locating the charging port and also we incorporated a autonomous digital payment system.
+</p>
+   
+    <h3 style="color: yellow">A.	MATERIALS</h3>
+    <p><ul>
+    	<li>Servo motor:MG995</li>
+		<li>Node MCU:ESP8266</li>	
+		<li>Battery charge protection for Li-ion:TP4056</li>
+		<li>Ultrasonic sensor module:Hc-Sr04</li>
+		<li>IR Sensor</li>
+		<li>3D Printed Robotic ARM</li>
+		<li>Relay:5V 10A</li>
+		<li>Toy Car:RC</li>
+	    <li>DC Power Supply:7.5V,2A</li>
+</ul>
+
+    <br>
+    <h3 style="color: yellow">B.	METHODOLOGY</h3>
+    <p>Electric/Hybrid Plug IN  vehicle enters the charging station ,Here we are using a RC Toy car as the vehicle .we also arranged a stopper on the floor ,So that the vehicle tyre should park exactly by hitting on the stopper .This arrangement helps the robotic hand enough data to locate the charger port position.<br><br>
+
+There is a indicator light in the charging station to show whether the charging station is free .we are using IR sensor for this purpose .when the charging station is empty the indicator lights show green ,when vehicle enters the IR sensor transmitted light reflect back  by hitting on the car body and it will be captured by the receiver and turns the indicator light red and the charging station  becomes active for charging. <br><br>
+
+The driver pair their mobile with the charging station by login to the web application provided by the charging station and select the charging slot .Once they are paired the charging station gets the details of that car such as the car model ,height of the charging port ,length and breadth wise distance from stopper pad to the charging port .we also use ultrasonic distance sensor to get real time distances.<br><br>
+
+Based  on the above informations robotic arm place the charging wire at the tip exactly to the charging port .we use a magnetic head charging port ,So that the Plug IN of the arm will made more accurate.<br><br>
+
+The driver pair their mobile with the charging station by login to the web application provided by the charging station and select the charging slot .Once they are paired the charging station gets the details of that car such as the car model ,height of the charging port ,length and breadth wise distance from stopper pad to the charging port .we also use ultrasonic distance sensor to get real time distances.<br><br>
+
+ Based  on the above informations robotic arm place the charging wire at the tip exactly to the charging port .we use a magnetic head charging port ,So that the Plug IN of the arm will made more accurate.<br><br>
+
+After Plug IN the Relay coil gets energised and current is passed for charging .Here we use TP4056 batter charge protection  for Li-ion in the car for indicating the charging is taking place .Once the relay coil is energised the timer starts  and stops until charging is finished or the driver stops the charging process by clicking stop button through the online web application. <br><br>
+
+Once the timer stops ,the Relay will be de-energised and the robtic arm will be withdrawn to intial position .Based on the charging time ,Node MCU ESP8266 calculate the bill and send to the charging station server through wifi hotspot .This amount will be debited from the account of the driver provided by the charging station company .Above transaction details will be accesable to the driver by login to their web portal.The above proposed  system is shown in Figure 4.
+
+</p><br>
+<div style="text-align: center;">
+	<img src="img1/111.jpg" class="img-fluid" style="width: 500px;height: 400px;">
+</div>
+<br>
+<br>
+<h1 style="font-family: 'League Spartan', arial, helvetica, sans-serif;color: rgb(82, 161, 47);font-size: 32px;letter-spacing: normal;text-align: center;font-weight: bold;">	DISCUSSION AND OUTLOOK</h1><br>
+<p>The main idea of automated charging systems includes a very easy and comfortable charging process. The car parks in the parking bay and the remaining steps are being finished by the system automatically. That means the automated charging system detects the type and model of car, recognises thereupon the position of the charging socket, the required charging cable and charging strategy and starts afterwards with the charging process. As soon as the process is finished, the system picks up the charging cable and the vehicle is ready to drive. But there are some obstacles that need to be adjusted in order to realize automated conductive charging. From a purely technical point of view, such systems seem to be state of the art, but there are some challenges that must be solved - and for the target to handle different vehicle types, the challenges are rising significantly.<br><br>
+There is no standard for the position of the charging socket. An investigation of various vehicle types shows big differences regarding the socket places depending on the car brand and type. Electric and hybrid vehicles usually have their sockets on the right or left side, additionally some cars have it on the front or back side of the vehicle. Furthermore, the height of the socket is also different. There is a European standard for charging cables, the Type 2 (Mennekes) connector, but many manufacturers, especially in Asia or USA use other connector types.<br><br>
+A second big problem can be found in the charging cap mechanism. Several vehicles have a security cap that makes it impossible to charge the vehicle without removing them. Even in this field there are differences. Some brands have a rubber plug which has to be unscrewed, others have a plastic flap. The variety of the systems is often simply based on specific design solutions. <br><br>
+The target to charge multiple vehicles and different vehicle types at parking facilities requires complex devices for handling and management of cables, especially by the use of DC quick charging. Long and heavy cables with limited bend radius waste a lot of space and additionally, if they are not carried by the robot, separate logistic equipment is needed. For example, the weight of a CCS-Type 2 charging cable for charging capacities of up to 106,25 kW is 1,7 kg/m and it has an outer diameter of 28,2 mm.
+An overview about the proposed vehicles  charging socket is presented in Figure 5 shows a typical parking situation of vehicles including the resulting charging socket position. As mentioned, these varieties of systems and vehicle-specific requirements complicate an automation of the charging process enormously.
+</p><br>
+<div style="text-align: center;">
+	<img src="img1/222.jpg" class="img-fluid" style="width: 500px;height: 400px;">
+</div>
+<br>
+<br>
+
+
+	<h1 style="font-family: 'League Spartan', arial, helvetica, sans-serif;color: rgb(82, 161, 47);font-size: 32px;letter-spacing: normal;text-align: center;font-weight: bold;">LITERATURE SURVEY</h1><br>
 	<ul>
 	<li><h3 style="color: yellow">Automated robot-based charging system for electric vehicles</h3></li>
 	<p>Automated charging systems are in development this time, but no manufacturer has launched a series product on the market until now. Furthermore, every current published system is only customized for one specific vehicle model. That means that only that specific model can be charged. In future years an automated system should be able to charge every electric vehicle independent from the car type.</p>
@@ -184,6 +240,8 @@ cables and puts it back into the magazine and the whole process can start again 
 <br>
 <br>
     </ul>
+    <h1 style="font-family: 'League Spartan', arial, helvetica, sans-serif;color: rgb(82, 161, 47);font-size: 32px;letter-spacing: normal;text-align: center;font-weight: bold;">CONCLUSION</h1><br>
+<p>Conductive automated charging systems are a new emerging topic in the electric vehicle industry. By increasing charging power, the cables are getting more unwieldy and thereby charging of a vehicle can be very aggravating. Some pilot projects already employ with automatic charging systems, but currently they are all in a prototype status. The presented concept of an automated charging robot for parking garages gives an overview of possibilities for possible solutions. It considers the importance that every electric vehicle can be charged by one system. Furthermore, there are no modifications to the vehicle necessary. Future electric cars will be designed for automated charging. This includes barrier-free access to the charging socket or automated opening and closing systems of the loading covers and standardized communication systems. Inductive charging systems will be an alternative, but disadvantages like the limited charging capacity or unstandardized systems may restrict the application to private sector usage. Conductive automated charging systems include a high potential, whether in private or public sectors, to make charging of electric cars more comfortable.</p><br><br>
 </div>
    </div>
    </div>
