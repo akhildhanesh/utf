@@ -161,7 +161,7 @@ animation:move-twink-back 200s linear infinite;
     position: fixed;
     z-index: 5;
     top: 0;
-    left: 0;
+    right: 0;
     background-color:green ;
     overflow-x: hidden;
     padding-top: 60px;
